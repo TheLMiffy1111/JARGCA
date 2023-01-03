@@ -1,0 +1,158 @@
+buildscript {
+    repositories {
+        maven {
+            url = "https://maven.minecraftforge.net/"
+        }
+        maven {
+            url = "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            url = "https://jitpack.io/"
+        }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT"
+    }
+}
+
+apply plugin: "net.minecraftforge.gradle.forge"
+apply plugin: "eclipse"
+apply plugin: "maven-publish"
+
+repositories {
+    mavenCentral()
+    jcenter()
+    flatDir {
+        dirs "libs"
+    }
+    maven {
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        url = "https://maven.amadornes.com/"
+    }
+    maven {
+        url = "https://maven.ic2.player.to/"
+    }
+    maven {
+        url = "https://maven.tterrag.com/"
+    }
+    maven {
+        url = "https://maven.modmuss50.me/"
+    }
+    maven {
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        url = "https://maven.shadowfacts.net/"
+    }
+    maven {
+        url = "https://maven.mcmoddev.com/"
+    }
+    maven {
+        url = "https://maven.thiakil.com/"
+    }
+    maven {
+        url = "https://www.mod-buildcraft.com/maven/"
+    }
+    maven {
+        url = "https://maven.cleanroommc.com/"
+    }
+    maven {
+        url = "https://cursemaven.com/"
+    }
+    maven {
+        url = "https://modmaven.dev/"
+    }
+}
+
+sourceSets {
+    main
+}
+
+version = "1.0.0.0"
+group = "thelm.jargca"
+archivesBaseName = "JARGCA-1.12.2"
+
+sourceCompatibility = targetCompatibility = "1.8"
+compileJava {
+    sourceCompatibility = targetCompatibility = "1.8"
+}
+compileJava.options.encoding = "UTF-8"
+
+minecraft {
+    version = "1.12.2-14.23.5.2847"
+    runDir = "run"
+    mappings = "stable_39"
+    def commonJvmArgs = [
+        "-Xmn768m", "-XX:+DisableExplicitGC", "-XX:+UseConcMarkSweepGC",
+        "-XX:+UseParNewGC", "-XX:+UseNUMA", "-XX:+CMSParallelRemarkEnabled",
+        "-XX:MaxTenuringThreshold=15", "-XX:MaxGCPauseMillis=30", "-XX:GCPauseIntervalMillis=150",
+        "-XX:+UseAdaptiveGCBoundary", "-XX:-UseGCOverheadLimit", "-XX:+UseBiasedLocking",
+        "-XX:SurvivorRatio=8", "-XX:TargetSurvivorRatio=90", "-XX:MaxTenuringThreshold=15",
+        "-XX:+UseFastAccessorMethods", "-XX:+UseCompressedOops", "-XX:+OptimizeStringConcat",
+        "-XX:+AggressiveOpts", "-XX:ReservedCodeCacheSize=2048m", "-XX:+UseCodeCacheFlushing",
+        "-XX:SoftRefLRUPolicyMSPerMB=10000", "-XX:ParallelGCThreads=10", "-Dmixin.hotSwap=true",
+        "-Dmixin.checks.interfaces=true"
+    ]
+    clientJvmArgs.add("-Xmx7G")
+    clientJvmArgs.addAll(commonJvmArgs)
+    clientRunArgs.add("--username=Dev")
+    serverJvmArgs.add("-Xmx3G")
+    serverJvmArgs.addAll(commonJvmArgs)
+    makeObfSourceJar = false
+}
+
+dependencies {
+    deobfCompile "mezz.jei:jei_1.12.2:4.16.1.302"
+    deobfCompile "MCMultiPart2:MCMultiPart:2.5.3"
+    deobfCompile "blusunrize:ImmersiveEngineering:0.12-88-506"
+    deobfCompile "codechicken:CodeChickenLib:1.12.2-3.2.3.358:universal"
+    implementation "net.shadowfacts:Forgelin:1.8.4"
+    deobfCompile "CraftTweaker2:CraftTweaker2-API:4.1.20.675"
+    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.675"
+
+    deobfCompile "curse.maven:wrapup-275153:2486198"
+    deobfCompile "curse.maven:jaopca-266936:4292025"
+    deobfCompile "curse.maven:baubles-227083:2518667"
+    deobfCompile "curse.maven:infinitylib-251396:3317119"
+    deobfCompile "curse.maven:agricraft-225635:3317747"
+    deobfCompile "curse.maven:cucumber-272335:2645867"
+    deobfCompile "curse.maven:mystical-agriculture-246640:2680943"
+    deobfCompile "curse.maven:mystical-agradditions-256247:2671242"
+    deobfCompile "curse.maven:ex-nihilo-creatio-274456:2817545"
+    deobfCompile "curse.maven:sky-resources-243482:2758220"
+
+    deobfCompile "curse.maven:thaumcraft-223628:2629023"
+    deobfCompile "curse.maven:thaumic-jei-285492:2705304"
+    deobfCompile "curse.maven:redstone-flux-270789:2920436"
+    deobfCompile "curse.maven:cofh-core-69162:2920433"
+    deobfCompile "curse.maven:cofh-world-271384:2920434"
+    deobfCompile "curse.maven:thermal-foundation-222880:2926428"
+    deobfCompile "curse.maven:thermal-expansion-69163:2926431"
+    deobfCompile "curse.maven:thermal-dynamics-227443:2920505"
+    deobfCompile "curse.maven:abyssalcraft-53686:3425234"
+
+    deobfCompile "zone.rong:mixinbooter:7.0"
+    deobfCompile "curse.maven:jeid-296289:3581715"
+    deobfCompile "curse.maven:spark-361579:3245793"
+    deobfCompile "curse.maven:lolasm-460609:3834448"
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title": "JARGCA",
+                "Specification-Vendor": "thelm",
+                "Specification-Version": "1",
+                "Implementation-Title": "${archivesBaseName}",
+                "Implementation-Version": "${version}",
+                "Implementation-Vendor": "thelm"
+        ],)
+    }
+}

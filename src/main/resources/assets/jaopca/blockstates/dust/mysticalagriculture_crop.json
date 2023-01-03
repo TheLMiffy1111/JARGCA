@@ -1,0 +1,46 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:cross"
+    },
+    "variants": {
+        "age": {
+            "0": {
+                "textures": { "cross": "jaopca:block/dust/mysticalagriculture_crop_0" }
+            },
+            "1": {
+                "textures": { "cross": "jaopca:block/dust/mysticalagriculture_crop_1" }
+            },
+            "2": {
+                "textures": { "cross": "jaopca:block/dust/mysticalagriculture_crop_2" }
+            },
+            "3": {
+                "textures": { "cross": "jaopca:block/dust/mysticalagriculture_crop_2" }
+            },
+            "4": {
+                "textures": { "cross": "jaopca:block/dust/mysticalagriculture_crop_3" }
+            },
+            "5": {
+                "textures": { "cross": "jaopca:block/dust/mysticalagriculture_crop_4" }
+            },
+            "6": {
+                "textures": { "cross": "jaopca:block/dust/mysticalagriculture_crop_4" }
+            },
+            "7": {
+                "model": "jaopca:cross_overlayed",
+                "textures": {
+                    "base": "jaopca:block/dust/mysticalagriculture_crop_5",
+                    "overlay": "jaopca:block/dust/mysticalagriculture_crop_5_overlay"
+                }
+            }
+        },
+        "inventory": [{
+            "model": "builtin/generated",
+            "transform": "forge:default-item",
+            "textures": {
+                "layer0": "jaopca:block/dust/mysticalagriculture_crop_5",
+                "layer1": "jaopca:block/dust/mysticalagriculture_crop_5_overlay"
+            }
+        }]
+    }
+}

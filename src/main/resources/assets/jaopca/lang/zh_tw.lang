@@ -1,0 +1,13 @@
+item.jaopca.exnihilocreatio_piece=%s礦石碎片
+item.jaopca.exnihilocreatio_chunk=%s礦石塊
+
+item.jaopca.mysticalagriculture_essence=%s精華
+item.jaopca.mysticalagriculture_seeds=%s種子
+block.jaopca.mysticalagriculture_crop=%s作物
+block.jaopca.mysticalagriculture_crux=%s核心
+
+agri_plant.jaopca.mysticalagriculture_agricraft_mystical=%s作物
+agri_plant.desc.jaopca.mysticalagriculture_agricraft_mystical=%s種子.
+
+item.jaopca.skyresources_alch_dust=%s煉金礦粉
+item.jaopca.skyresources_dirty_gem=污濁的%s

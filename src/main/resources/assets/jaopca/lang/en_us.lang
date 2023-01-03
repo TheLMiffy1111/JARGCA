@@ -1,0 +1,13 @@
+item.jaopca.exnihilocreatio_piece=%s Ore Piece
+item.jaopca.exnihilocreatio_chunk=%s Ore Chunk
+
+item.jaopca.mysticalagriculture_essence=%s Essence
+item.jaopca.mysticalagriculture_seeds=%s Seeds
+block.jaopca.mysticalagriculture_crop=%s Crop
+block.jaopca.mysticalagriculture_crux=%s Crux
+
+agri_plant.jaopca.agricraft_mysticalagriculture_mystical=%s Crop
+agri_plant.desc.jaopca.agricraft_mysticalagriculture_mystical=%s Seeds.
+
+item.jaopca.skyresources_alch_dust=%s Alchemical Ore Dust
+item.jaopca.skyresources_dirty_gem=Dirty %s

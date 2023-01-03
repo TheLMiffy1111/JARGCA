@@ -1,0 +1,14 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "jaopca:cube_overlayed",
+        "textures": {
+            "base": "jaopca:block/crystal/mysticalagriculture_crux",
+            "overlay": "jaopca:block/crystal/mysticalagriculture_crux_overlay"
+        }
+    },
+    "variants": {
+        "normal": [{}],
+        "inventory": [{}]
+    }
+}

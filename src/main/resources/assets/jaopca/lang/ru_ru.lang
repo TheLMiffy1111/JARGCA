@@ -1,0 +1,12 @@
+item.jaopca.exnihilocreatio_piece=Кусок руды %s
+item.jaopca.exnihilocreatio_chunk=Толстый кусок руды %s
+
+item.jaopca.mysticalagriculture_essence=%s эссенция
+item.jaopca.mysticalagriculture_seeds=%s семена
+block.jaopca.mysticalagriculture_crop=%s культура
+
+agri_plant.jaopca.mysticalagriculture_agricraft_mystical=%s культура
+agri_plant.desc.jaopca.mysticalagriculture_agricraft_mystical=%s семена.
+
+item.jaopca.skyresources_alch_dust=Алхимическая рудная пыль %s
+item.jaopca.skyresources_dirty_gem=Грязный %s
