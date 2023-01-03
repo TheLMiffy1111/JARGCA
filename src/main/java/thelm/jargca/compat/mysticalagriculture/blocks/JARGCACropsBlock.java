@@ -46,7 +46,6 @@ public class JARGCACropsBlock extends BlockCrops implements IMaterialFormBlock {
 	protected Optional<String> translationKey = Optional.empty();
 
 	public JARGCACropsBlock(IForm form, IMaterial material, IBlockFormSettings settings) {
-		super();
 		this.form = form;
 		this.material = material;
 		this.settings = settings;
@@ -135,34 +134,20 @@ public class JARGCACropsBlock extends BlockCrops implements IMaterialFormBlock {
 		int fertilizer = 0;
 		int seeds = 1;
 		if(age == 7) {
-			if(getTier() < 6 && ModConfig.confSeedChance > 0) {
-				if(rand.nextInt(100/ModConfig.confSeedChance) > 0) {
-					seeds = 1;
-				}
-				else {
-					seeds = 2;
-				}
+			essence = 1;
+			if(getTier() < 6 && rand.nextInt(100) < ModConfig.confSeedChance) {
+				seeds = 2;
 			}
-			if(ModConfig.confFertilizedEssenceChance > 0) {
-				if(rand.nextInt(100/ModConfig.confFertilizedEssenceChance) > 0) {
-					fertilizer = 0;
-				}
-				else {
-					fertilizer = 1;
-				}
+			if(rand.nextInt(100) < ModConfig.confFertilizedEssenceChance) {
+				fertilizer = 1;
 			}
-			if(ModConfig.confEssenceChance > 0) {
-				if(rand.nextInt(100/ModConfig.confEssenceChance) > 0) {
-					essence = 1;
-				}
-				else {
-					essence = 2;
-				}
+			if(rand.nextInt(100) < ModConfig.confEssenceChance) {
+				essence = 2;
 			}
 		}
-		drops.add(new ItemStack(this.getSeed(), seeds, 0));
+		drops.add(new ItemStack(getSeed(), seeds, 0));
 		if(essence > 0) {
-			drops.add(new ItemStack(this.getCrop(), essence, 0));
+			drops.add(new ItemStack(getCrop(), essence, 0));
 		}
 		if(fertilizer > 0 && ModConfig.confFertilizedEssence) {
 			drops.add(new ItemStack(ModItems.itemFertilizedEssence, fertilizer, 0));
