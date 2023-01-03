@@ -89,7 +89,7 @@ public class MysticalAgricultureModule implements IModule {
 			Collections.addAll(BLACKLIST, "Amethyst", "Malachite", "Tanzanite", "Topaz");
 		}
 		if(Loader.isModLoaded("botania")) {
-			Collections.addAll(BLACKLIST, "Elementium", "Manasteel", "Terrasteel");
+			Collections.addAll(BLACKLIST, "ElvenElementium", "Manasteel", "Terrasteel");
 		}
 		if(Loader.isModLoaded("draconicevolution")) {
 			Collections.addAll(BLACKLIST, "Draconium");
